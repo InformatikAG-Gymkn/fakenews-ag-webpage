@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Test Falschinformationen</title>
+        <title>Teste dich selbst!</title>
         <link rel="stylesheet" href="../styles/style.css">
     </head>
 <body>
-    <div id="bar-element">
-        <a href="../index.html">↩ Zurück</a>
+    <div class="bar">
+        <a href="../index.html" style="text-decoration: none;">
+            <div id="bar-element">🏠 Start</div>
+        </a>
+        <a href="edu.html" style="text-decoration: none;">
+            <div id="bar-element">🎓 Bildung</div>
+        </a>
+        <a href="test.html" style="text-decoration: none;">
+            <div id="bar-element">🎯 Test</div>
+        </a>
+        <a id="bar-element-about" href="about.html">
+        Über
+        </a>
     </div>
-    <div id="box">
-        Hier kommt der Test-Inhalt hin.
+
+    <div class="main">
+        <br>
+        <div id="box">
+            <h1>Teste dich selbst!</h1>
+            <p>Willkommen zum HateFake-Testbereich! Hier kannst du dein Wissen und deine Fähigkeiten im Erkennen von Falschinformationen auf die Probe stellen. Wähle einen der verfügbaren Tests aus, um zu starten:</p>
+            <ul>
+                <li><u><a href="tests/language-test.html">Sprachbasierter Test</a></u> – Erkenne, ob ein Text von einer KI generiert wurde oder nicht.</li>
+                <!-- more tests here -->
+            </ul>
+        </div>
     </div>
 </body>
 </html>
