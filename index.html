@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HateFake</title>
+    <title>HateFake – Medienbildung für die Schule</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="data/images/base/hatefake-logo.ico">
 </head>
 <body>
     <div class="bar">
+        <a class="brand" href="index.html"><img src="data/images/base/hatefake-logo.ico" alt="logo" style="padding-top: 10px;"></a>
         <a href="index.html" style="text-decoration: none;">
-            <div class="bar-element">🏠 Start</div>
+            <div class="bar-element active">Start</div>
         </a>
         <a href="pages/edu.html" style="text-decoration: none;">
-            <div class="bar-element">🎓 Bildung</div>
+            <div class="bar-element">Bildung</div>
+        </a>
+        <a href="pages/materials.html" style="text-decoration: none;">
+            <div class="bar-element">Materialien</div>
         </a>
         <a href="pages/test.html" style="text-decoration: none;">
-            <div class="bar-element">🎯 Test</div>
+            <div class="bar-element">Quiz</div>
         </a>
         <a class="bar-element-about" href="pages/about.html">
-        Über
+        Über uns
         </a>
     </div>
 
     <div class="main">
-        <br>
         <div id="box">
+            <p class="eyebrow">Informatik-AG · Gymnasium Markneukirchen</p>
             <h1>Willkommen bei HateFake</h1>
-            <p>Deine Ressource zur Erkennung und Bekämpfung von Falschinformationen – eine Plattform, auf der du dich weiterbilden, informieren und selbst testen kannst, wenn es um Fake News geht.</p>
-
-            Hier lernst du, wie du:
-            
-            <ul>
-                <li>Falschmeldungen erkennst, bevor du sie weiterleitest</li>
-                <li>Quellen richtig prüfst und einordnest</li>
-                <li>typische Tricks von Desinformation durchschaust</li>
-                <li>dein eigenes Urteilsvermögen mit interaktiven Tests trainierst</li>
-            </ul>
-            <p>Nutze die Navigation oben, um direkt loszulegen 🚀</p>
+            <p class="lead">Deine Ressource zur Erkennung und Bekämpfung von Falschinformationen. Wir bieten eine Plattform, auf der du dich weiterbilden, informieren und selbst testen kannst, wenn es ums Thema Fake News geht.</p>
+            <div class="card-grid">
+                <section class="card">
+                    <h3>Wissen aufbauen</h3>
+                    <p>Lerne die Grundlagen, um auch in Zukunft sicher und wahrheitsgetreu informiert zu sein.</p>
+                    <a class="button-link" href="pages/edu.html">Zur Bildung</a>
+                </section>
+                <section class="card">
+                    <h3>Selbst ausprobieren</h3>
+                    <p>Teste wie gut du schon Fakenews erkennen kannst.</p>
+                    <a class="button-link" href="pages/test.html">Quiz starten</a>
+                </section>
+            </div>
         </div>
     </div>
 </body>

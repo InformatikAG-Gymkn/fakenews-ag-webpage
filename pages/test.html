@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Teste dich selbst!</title>
         <link rel="stylesheet" href="../styles/style.css">
+        <link rel="icon" type="image/x-icon" href="../data/images/base/hatefake-logo.ico">
     </head>
 <body>
     <div class="bar">
+        <a class="brand" href="../index.html"><img src="../data/images/base/hatefake-logo.ico" alt="logo" style="padding-top: 10px;"></a>
         <a href="../index.html" style="text-decoration: none;">
-            <div class="bar-element">🏠 Start</div>
+            <div class="bar-element">Start</div>
         </a>
         <a href="edu.html" style="text-decoration: none;">
-            <div class="bar-element">🎓 Bildung</div>
+            <div class="bar-element">Bildung</div>
+        </a>
+        <a href="materials.html" style="text-decoration: none;">
+            <div class="bar-element">Materialien</div>
         </a>
         <a href="test.html" style="text-decoration: none;">
-            <div class="bar-element">🎯 Test</div>
+            <div class="bar-element active">Quiz</div>
         </a>
         <a class="bar-element-about" href="about.html">
-        Über
+        Über uns
         </a>
     </div>
 
     <div class="main">
-        <br>
         <div id="box">
+            <p class="eyebrow">Mach den Faktencheck</p>
             <h1>Teste dich selbst!</h1>
             <p>Willkommen zum HateFake-Testbereich! Hier kannst du dein Wissen und deine Fähigkeiten im Erkennen von Falschinformationen auf die Probe stellen. Wähle einen der verfügbaren Tests aus, um zu starten:</p>
             <ul>
-                <li><u><a href="tests/language-test.html">Sprachbasierter Test</a></u> – Erkenne, ob ein Text von einer KI generiert wurde oder nicht.</li>
-                <li><u><a href="tests/image-test.html">Bildbasierter Test</a></u> – Erkenne, ob die gegebene Grafik von einer KI generiert wurde oder nicht.</li>
-                <!-- more tests here -->
+                <li><a href="tests/language-test.html">Sprachbasierter Test</a> – Welcher Text ist KI generiert und welcher nicht?</li>
+                <li><a href="tests/image-test.html">Bildbasierter Test</a> – Prüfe ob das Bild echt oder von einer KI entworfen wurde.</li>
             </ul>
         </div>
     </div>

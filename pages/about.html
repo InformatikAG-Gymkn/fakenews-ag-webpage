@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über uns</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../data/images/base/hatefake-logo.ico">
 </head>
 <body>
-    <div class="bar-element">
-        <a href="../index.html">↩ Zurück</a>
+    <div class="bar">
+        <a class="brand" href="../index.html"><img src="../data/images/base/hatefake-logo.ico" alt="logo" style="padding-top: 10px;"></a>
+        <a class="bar-element" href="../index.html">Start</a>
+        <a class="bar-element" href="edu.html">Bildung</a>
+        <a href="materials.html" style="text-decoration: none;">
+            <div class="bar-element">Materialien</div>
+        </a>
+        <a class="bar-element" href="test.html">Quiz</a>
+        <a class="bar-element-about active" href="about.html">Über uns</a>
     </div>
-    <div id="box">
+    <div class="main"><div id="box">
+        <p class="eyebrow">Das Projekt</p>
         <h1>Über uns</h1>
         <p>Das Internet ist voller Informationen, aber nicht alles, was wir lesen oder sehen, entspricht der Wahrheit. Zwischen echten Nachrichten, Meinungen und gezielten Falschmeldungen verschwimmen die Grenzen oft. Genau hier setzt HateFake an.</p>
         
-        <img src="../data/image01.jpg" alt="aboutus-image" style="width:50%;height:auto;margin:20px 0; border-radius: 2%;">
+        <img src="../data/image01.jpg" alt="Schülerinnen und Schüler der Informatik-AG" style="width:50%;height:auto;margin:20px 0;">
         
         <p>Entwickelt wurde HateFake von der <b>Informatik-AG des Gymnasiums Markneukirchen</b>. Wir sind eine Gruppe von Schülerinnen und Schülern, die sich nicht damit zufriedengeben wollten, nur über Fake News zu reden. Stattdessen wollten wir etwas schaffen, das wirklich verändert, wie junge Menschen Informationen wahrnehmen. Aus dieser Idee entstand eine Website, die Bildung, Technik und gesellschaftliches Bewusstsein miteinander verbindet, ganz klar mit dem Fokus auf die heutigen Möglichkeiten mit KI (=künstliche Intelligenz).</p>
         <p>Denn wir glauben: Wer kritisch denkt, lässt sich nicht so leicht täuschen. Und wer die Mechanismen hinter Fake News versteht, kann helfen, das Internet zu einem besseren Ort zu machen.</p>
         
         <div style="display: flex; gap: 12px; margin-top: 24px;">
-            <u><a href="https://gymnasiummarkneukirchen.de/impressum/" target="_blank">Impressum</a></u>
-            <u><a href="legal.html">Rechtliches/Datenschutz</a></u>
-        </div>
+            <a class="button-link" href="https://gymnasiummarkneukirchen.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+            <a class="button-link" href="legal.html">Rechtliches/Datenschutz</a>
+        </div></div>
     </div>
 </body>
 </html>

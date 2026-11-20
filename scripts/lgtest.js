@@ -24,8 +24,18 @@ function updateProgressBar() {
 
 function showQuestion() {
     const box = document.getElementById("box");
+    var message = "";
     if (currentIndex >= tasks.length) {
-        box.innerHTML = `<h2>Quiz beendet! 🎉</h2><p>Dein Score: ${score} von ${tasks.length} Fragen richtig!</p>`;
+        if (score < 5) {
+            message = "Ganz schön schwierig das alles zu erkennen... Ein gutes Bauchgefühl und das gewisse Grundwissen: das beste Rezept um KI Texte zu erkennen 🍳";
+        }
+        else if (score >= 5 || score <= 7) {
+            message = "Solider Mittelbereich, so kann es doch weitergehen 👍🏼";
+        }
+        else {
+            message = "Wir haben es hier mit herausragendem Fachwissen zu tun. Klasse 💪🏼"
+        }
+        box.innerHTML = `<h2>Quiz beendet! 🎉</h2><p>Dein Score: ${score} von ${tasks.length} Fragen richtig! </br></br>${message}</p>`;
         return;
     }
     const task = tasks[currentIndex];
