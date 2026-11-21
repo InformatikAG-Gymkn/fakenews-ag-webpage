@@ -6,6 +6,12 @@
     <title>HateFake - Bildung Falschinformationen</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="icon" type="image/x-icon" href="../data/images/base/hatefake-small.png">
+    <script>
+        function shame()
+        {
+            alert("Diese Seite ist ein Fake. Sie nicht anzuklicken war Teil der Aufgabe.\nRegel 1: Nicht auf unbekannte Links klicken.");
+        }
+    </script>
 </head>
 <body>
     <div class="bar">
@@ -101,7 +107,7 @@
             <p>Chatbot-Antworten und KI-Artikel klingen oft seriöser, als sie sind. Drei einfache Regeln:</p>
             <ol class="steps">
                 <li><strong>Klicke dich bis zur echten Quelle durch.</strong> Wenn der Text eine Studie, ein Urteil oder ein Zitat nennt, öffne das Original. Häufig existiert es nicht oder sagt etwas anderes.</li>
-                <li><strong>Prüfe den Link.</strong> Eine URL wie „bild-nachrichten-aktuell.de“ ist keine Bild-Zeitung. Achte auf minimale Schreibvarianten echter Domains.</li>
+                <li><strong>Prüfe den Link.</strong> Eine URL wie „<a href="javascript:shame();"">bild-nachrichten-aktuell.de</a>“ ist keine Bild-Zeitung. Achte auf minimale Schreibvarianten echter Domains, das gilt auch für Umlaute.</li>
                 <li><strong>Vergleiche mit zwei seriösen Quellen</strong>, bevor du den Text weitergibst: KI-Fake-Seiten bestätigen sich oft gegenseitig.</li>
             </ol>
 
