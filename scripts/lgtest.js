@@ -29,7 +29,7 @@ function showQuestion() {
         if (score < 7) {
             message = "Ganz schön schwierig das alles zu erkennen... Ein gutes Bauchgefühl und das gewisse Grundwissen: das beste Rezept um KI Texte zu erkennen 🍳";
         }
-        else if (score >= 10 && score <= 12) {
+        else if (score >= 7 && score <= 12) {
             message = "Solider Mittelbereich, so kann es doch weitergehen 👍🏼";
         }
         else {
