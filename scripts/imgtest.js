@@ -9,7 +9,7 @@ async function loadTasks() {
         if (!data.images || !Array.isArray(data.images)) {
             throw new Error('Invalid data structure: images array not found');
         }
-        tasks = data.images.sort(() => Math.random() - 0.5).slice(0, 15);
+        tasks = data.images.sort(() => Math.random() - 0.5).slice(0, 10);
         showQuestion();
     } catch (error) {
         console.error('Error loading tasks:', error);

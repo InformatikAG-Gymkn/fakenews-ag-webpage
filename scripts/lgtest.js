@@ -9,7 +9,7 @@ async function loadTasks() {
         if (!data.texts || !Array.isArray(data.texts)) {
             throw new Error('Invalid data structure: texts array not found');
         }
-        tasks = data.texts.sort(() => Math.random() - 0.5).slice(0, 15);
+        tasks = data.texts.sort(() => Math.random() - 0.5).slice(0, 10);
         showQuestion();
     } catch (error) {
         console.error('Error loading tasks:', error);
@@ -26,10 +26,10 @@ function showQuestion() {
     const box = document.getElementById("box");
     var message = "";
     if (currentIndex >= tasks.length) {
-        if (score < 7) {
+        if (score < 5) {
             message = "Ganz schön schwierig das alles zu erkennen... Ein gutes Bauchgefühl und das gewisse Grundwissen: das beste Rezept um KI Texte zu erkennen 🍳";
         }
-        else if (score >= 7 && score <= 12) {
+        else if (score >= 5 && score <= 7) {
             message = "Solider Mittelbereich, so kann es doch weitergehen 👍🏼";
         }
         else {
