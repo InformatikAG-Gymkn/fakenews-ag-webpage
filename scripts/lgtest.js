@@ -26,10 +26,10 @@ function showQuestion() {
     const box = document.getElementById("box");
     var message = "";
     if (currentIndex >= tasks.length) {
-        if (score < 5) {
+        if (score < 7) {
             message = "Ganz schön schwierig das alles zu erkennen... Ein gutes Bauchgefühl und das gewisse Grundwissen: das beste Rezept um KI Texte zu erkennen 🍳";
         }
-        else if (score >= 5 || score <= 7) {
+        else if (score >= 10 && score <= 12) {
             message = "Solider Mittelbereich, so kann es doch weitergehen 👍🏼";
         }
         else {
@@ -39,7 +39,7 @@ function showQuestion() {
         return;
     }
     const task = tasks[currentIndex];
-    box.innerHTML = `<div id="progress-bar" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #e0e0e0; border-radius: var(--pill-radius) var(--pill-radius) 0 0;"><div id="progress-fill" style="height: 100%; background: var(--accent); width: 0%; transition: width 0.3s ease;"></div></div><p>${task.text}</p><div style="display: flex; gap: 12px; margin-top: 24px;"><button onclick="answerQuestion('true')" style="flex: 1; padding: 12px; background: var(--accent); color: white; border: none; border-radius: var(--pill-radius); cursor: pointer; font-weight: 600;">KI</button><button onclick="answerQuestion('false')" style="flex: 1; padding: 12px; background: var(--accent); color: white; border: none; border-radius: var(--pill-radius); cursor: pointer; font-weight: 600;">Nicht KI</button></div>`;
+    box.innerHTML = `<div id="progress-bar" style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #e0e0e0; border-radius: var(--pill-radius) var(--pill-radius) 0 0;"><div id="progress-fill" style="height: 100%; background: var(--accent); width: 0%; transition: width 0.3s ease;"></div></div><p>${task.text}</p><div class="quiz-actions"><button onclick="answerQuestion('true')" style="padding: 12px; background: var(--accent); color: white; border: none; border-radius: var(--pill-radius); cursor: pointer; font-weight: 600;">KI</button><button onclick="answerQuestion('false')" style="padding: 12px; background: var(--accent); color: white; border: none; border-radius: var(--pill-radius); cursor: pointer; font-weight: 600;">Nicht KI</button></div>`;
     updateProgressBar();
 }
 

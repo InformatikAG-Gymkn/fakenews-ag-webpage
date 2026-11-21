@@ -18,6 +18,15 @@
 
 * { box-sizing: border-box; }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     min-height: 100%;
     background: var(--paper);
@@ -30,6 +39,7 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    padding-top: 69px;
     line-height: 1.65;
 }
 
@@ -37,8 +47,11 @@ a { color: var(--blue-dark); }
 a:hover { color: var(--red); }
 
 .bar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 50%;
+    width: calc(100% - 32px);
+    transform: translateX(-50%);
     z-index: 10;
     display: flex;
     align-items: center;
@@ -102,6 +115,7 @@ a:hover { color: var(--red); }
 
 #box {
     position: relative;
+    width: min(calc(100% - 32px), 900px);
     max-width: 900px;
     margin: 0 auto;
     padding: clamp(24px, 5vw, 52px);
@@ -181,7 +195,35 @@ li { margin: 7px 0; }
 
 img {
     max-width: 100%;
+    height: auto;
     border-radius: 4px;
+}
+
+.brand img {
+    display: block;
+    width: clamp(26px, 8vw, 34px);
+    height: clamp(26px, 8vw, 34px);
+    object-fit: contain;
+    padding-top: 0;
+}
+
+.quiz-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.quiz-actions button {
+    flex: 1 1 0;
+    min-height: 44px;
+}
+
+.quiz-image {
+    width: 90% !important;
+    max-height: 62vh;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
 }
 
 #progress-bar {
@@ -199,21 +241,114 @@ img {
     transition: width 0.3s ease;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
 @media (max-width: 680px) {
     .bar {
-        flex-wrap: wrap;
-        padding: 10px 16px;
+        position: static;
+        left: auto;
+        width: 100%;
+        max-width: none;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 8px 12px;
+        scrollbar-width: none;
+        transform: none;
     }
+
+    body { padding-top: 0; }
+
+    .bar::-webkit-scrollbar { display: none; }
 
     .brand {
-        width: 100%;
-        margin: 0 0 4px;
+        flex: 0 0 auto;
+        margin-right: 6px;
     }
 
-    .bar-element, .bar-element-about { padding: 6px 9px; }
+    .bar-element, .bar-element-about {
+        flex: 0 0 auto;
+        min-height: 44px;
+        padding: 6px 9px;
+        white-space: nowrap;
+    }
+
     .bar-element-about { margin-left: 0; }
-    .main { padding-top: 30px; }
+    .main {
+        width: calc(100% - 24px);
+        padding: 24px 0 40px;
+    }
+
+    #box {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        overflow-wrap: anywhere;
+    }
+
+    h2 { font-size: 1.5rem; }
+    .lead { font-size: 1.05rem; }
     .card-grid { grid-template-columns: 1fr; }
+
+    .card {
+        padding: 16px;
+    }
+
+    .button-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .eyebrow {
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    img[style*="width:50%"] {
+        width: 100% !important;
+    }
+
+    .quiz-image {
+        width: 100% !important;
+        max-height: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .quiz-actions {
+        flex-direction: column;
+    }
+
+    .quiz-actions button {
+        width: 100%;
+    }
+
+    .main {
+        width: calc(100% - 16px);
+    }
+
+    #box {
+        padding: 16px;
+    }
+
+    .button-link {
+        width: 100%;
+    }
+
+    ul, ol {
+        padding-left: 1.25rem;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
